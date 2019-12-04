@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+	<head> 
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+		<title>Ahorcado</title>
+
+		<!--grupo CSS-->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/Ap2Tema.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+
+		<!--grupo JavaScript-->
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/acciones.js" type="text/javascript"></script>
+		<!--  <script src="phonegap.js" type="text/javascript"></script> -->
+	</head>
+
+	<body>
+    <div data-role="page" id="principal" style="background-image:url(images/kiwi.jpeg)>">
+ <!--{/encabezado}-->
+ <!--{categoria_s}-->
+       <div style="text-align:center;">
+       <div style="display:inline-block">
+        <a href="#jugar" class="ui-btn">Jugar</a>
+          
+ 
+       </div>
+     
+       <div style="display:inline-block">
+        <a href="#opciones" class="ui-btn">Opciones</a>
+       
+     
+       </div>
+       </div>
+	   </div>
+	
+    	<!-- principal -->
+		
+
+        <div data-role="page" id="jugar">
+                    <div data-role="header" data-position="fixed" data-tap-toggle="false">
+						<a href="#principal" class="ui-btn">Principal</a>
+						<h2> Ahorcado</h2>
+						<a href="#" id="btncomenzar" class="ui-btn">Comenzar</a>
+                        
+                    </div>
+                    
+					<div role="main" class="ui-content">
+                    <div id="contenedor_imagen">
+                    <img src="images/ahorcado0.png">
+            
+                    </div>
+					
+                    <div id="palabra">
+                    &nbsp;
+                    </div>
+					
+                    <div id="contenedor_interfaz" style="text-align:center;">
+							<div id="palabra-error" style="display:none">
+								&nbsp;
+							</div>
+							<div id="contenedorletras">
+							<div id="anterior">
+							<h1><</h1>
+							</div>
+							<div id="actual">
+							</div>
+							<div id="siguiente">
+							<h1>></h1>
+							</div>
+							</div>
+						</div>
+					</div>
+                    <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+                    <h3>Palabras encontradas: <span id="encontradas">0</span></h3>
+                    </div>
+		</div>
+  
+               <div data-role="page" id="opciones" >   
+					<div data-role="header" data-position="fixed" data-tap-toggle="false">
+					<a href="#principal" class="ui-btn">Principal</a>
+					</div>
+                
+				<div role="main" class="ui-content" style="text-align:center;">
+        
+					<h1> INGRESAR TU DIRECCION IP </h1>
+					<input type="text" id="txtIp" placeholder="IP">
+					<div class="ui-btn" id="btnbuscarc">BUSCAR COLECCIONES</div>
+					
+					<div role="main" class="ui-content">
+						<label>SELECCIONA UNA COLECCION</label>
+						<select id="optcolecciones">
+					
+						</select>
+						<label>NUMERO DE PALABRAS</label>
+						<select id="optpalabras">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						</select>
+						
+						<div>
+						<div class="ui-btn" id="posicion">SELECCIONAR</div>
+						<div role="main" class="ui-content">
+						<div id="cargando" style="display:none">
+						<img src="images/ajax-loader.gif">
+						</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</body>
+</html> 
+
